@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+<!--   <head> -->
+<!--     <title>My Meme App</title> -->
+<!--     <style> -->
+<!--       body { -->
+<!--         font-family: Arial, sans-serif; -->
+<!--         background-color: #f5f5f5; -->
+<!--       } -->
+<!--       .container { -->
+<!--         max-width: 800px; -->
+<!--         margin: 0 auto; -->
+<!--         padding: 20px; -->
+<!--         background-color: #fff; -->
+<!--         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); -->
+<!--       } -->
+<!--       h1 { -->
+<!--         font-size: 24px; -->
+<!--         font-weight: bold; -->
+<!--         text-align: center; -->
+<!--       } -->
+<!--       img { -->
+<!--         display: block; -->
+<!--         max-width: 100%; -->
+<!--         margin: 0 auto; -->
+<!--       } -->
+<!--       p { -->
+<!--         font-size: 18px; -->
+<!--         text-align: center; -->
+<!--       } -->
+<!--     </style> -->
+<!--   </head> -->
+<!--   <body> -->
+<!--     <div class="container"> -->
+<!--       <h1>Here is your Meme!</h1> -->
+<!--       <img src="{{ meme_pic }}" alt="Meme"> -->
+<!--       <p>From {{ subreddit }}</p> -->
+<!--     </div> -->
+<!--   </body> -->
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Here is your Meme!</title>
+    <style>
+      body {
+          background-color: #F5F5F5;
+	  background-color: linear-gradient(to bottom, #77b269, #ffffff);
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      p {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-style: italic;
+      }
+      @keyframes spin {
+	0% {
+	    transform: rotate(0deg);
+	}
+	100% {
+	    transform: rotate(360deg);
+	}
+      }
+      
+      img {
+	    animation: spin 0.5s linear infinite;
+		}
+	.stop-rotate {
+	    animation-duration: 0.5s;
+	    animation-iteration-count: 1;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Here is your Meme!</h1>
+    <img src="{{meme_pic}}" alt="meme", class="spin stop-rotate">
+    <p>From r/{{subreddit}}</p>
+  </body>
+</html>
